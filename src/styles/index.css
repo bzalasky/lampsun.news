@@ -1,0 +1,21 @@
+body {
+  background-color: #FFFCEB;
+  color: #777;
+  font-family: 'mrs-eaves-xl-serif', serif;
+  font-size: 22px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+a {
+  border-bottom: 3px solid #eeebe3;
+  color: #777 !important;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+a:hover {
+  background-color: rgba(221,218,210, 0.3);
+  border-bottom: 3px solid #dddad2;
+  text-decoration: none;
+}
