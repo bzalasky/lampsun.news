@@ -8,6 +8,8 @@ import Header from "../components/Header"
 import "../../node_modules/tachyons/css/tachyons.css"
 import "../styles/index.css"
 
+import logo from "../images/lamp-and-sun-mark.png"
+
 const TemplateWrapper = ({ children }) => (
   <div className="flex flex-column items-center pa4">
     <Helmet
@@ -20,6 +22,7 @@ const TemplateWrapper = ({ children }) => (
         { name: "keywords", content: "dark money, politics, current events" }
       ]}
     >
+      <link rel="shortcut icon" href={logo} />
       <style>@import url('https://use.typekit.net/mqs6xst.css');</style>
     </Helmet>
     <Header />
