@@ -34,7 +34,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query PageQuery {
-    allContentfulLink(sort: { fields: [id] }) {
+    allContentfulLink(sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id
