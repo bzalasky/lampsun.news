@@ -7,23 +7,20 @@ const Feed = styled.ul`
   padding: 0;
 `
 
-const FeedItem = styled.li`
-  padding-top: 22px;
-
-  &:not(:last-child) {
-    padding-bottom: 22px;
-  }
-`
+const FeedItem = styled.li``
 
 const IndexPage = ({ data }) => {
   const linkEdges = data.allContentfulLink.edges
 
   return (
-    <Feed>
+    <Feed className="flex flex-column">
       {linkEdges &&
-        linkEdges.map(({ node }) => (
+        linkEdges.map(({ node }, i) => (
           <FeedItem key={node.id}>
-            <a href={node.url}>{node.title}</a>
+            <a className="small-caps" href={node.url}>
+              {node.title}
+            </a>
+            {i < 9 ? <hr /> : null}
           </FeedItem>
         ))}
     </Feed>
@@ -34,7 +31,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query PageQuery {
-    allContentfulLink(sort: { fields: [createdAt], order: DESC }) {
+    allContentfulLink(limit: 10, sort: { fields: [createdAt], order: DESC }) {
       edges {
         node {
           id

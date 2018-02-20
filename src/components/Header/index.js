@@ -11,9 +11,11 @@ const StyledLink = styled(Link)`
   text-decoration: none !important;
 `
 
+const Logo = styled.img``
+
 const Header = () => (
   <StyledLink to="/">
-    <img className="h4" src={logo} alt="The Lamp & Sun" />
+    <Logo className="h4" src={logo} alt="The Lamp & Sun" />
   </StyledLink>
 )
 

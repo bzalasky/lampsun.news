@@ -8,14 +8,21 @@ body {
 }
 
 a {
-  border-bottom: 3px solid #eeebe3;
-  color: #777 !important;
+  color: #777;
+  display: block;
   text-decoration: none;
-  transition: all 300ms ease;
+  transition: all 100ms ease;
 }
 
 a:hover {
-  background-color: rgba(221,218,210, 0.3);
-  border-bottom: 3px solid #dddad2;
+  color: #000;
   text-decoration: none;
+}
+
+.small-caps {
+  -moz-font-feature-settings: "c2sc", "smcp";
+  -ms-font-feature-settings: "c2sc", "smcp";
+  -webkit-font-feature-settings: "c2sc", "smcp";
+  font-feature-settings: "c2sc", "smcp";
+  letter-spacing: 0.05em;
 }
