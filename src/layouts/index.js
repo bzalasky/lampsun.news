@@ -11,10 +11,6 @@ import "../styles/index.css"
 
 import logo from "../images/lamp-and-sun-mark.png"
 
-const Sidebar = styled.div`
-  width: 192px;
-`
-
 const TemplateWrapper = ({ children }) => (
   <div className="flex flex-column items-center">
     <Helmet
@@ -30,9 +26,7 @@ const TemplateWrapper = ({ children }) => (
       <link rel="shortcut icon" href={logo} />
       <style>@import url('https://use.typekit.net/mqs6xst.css');</style>
     </Helmet>
-    <Sidebar className="pa4">
-      <Header />
-    </Sidebar>
+    <Header className="pt5 pb3" />
     <div className="pa4 mw7">{children()}</div>
   </div>
 )

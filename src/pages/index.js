@@ -7,7 +7,11 @@ const Feed = styled.ul`
   padding: 0;
 `
 
-const FeedItem = styled.li``
+const FeedItem = styled.li`
+  &:not(:last-child) {
+    border-bottom: 1px dotted #ebc800;
+  }
+`
 
 const IndexPage = ({ data }) => {
   const linkEdges = data.allContentfulLink.edges
@@ -16,11 +20,10 @@ const IndexPage = ({ data }) => {
     <Feed className="flex flex-column">
       {linkEdges &&
         linkEdges.map(({ node }, i) => (
-          <FeedItem key={node.id}>
+          <FeedItem className="pv2" key={node.id}>
             <a className="small-caps" href={node.url}>
               {node.title}
             </a>
-            {i < 9 ? <hr /> : null}
           </FeedItem>
         ))}
     </Feed>
